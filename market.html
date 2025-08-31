@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>DuckOracle</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #ea2a33;
+        --secondary-color: #f3e7e8;
+        --text-primary: #1b0e0e;
+        --text-secondary: #994d51;
+        --background-color: #fcf8f8;
+      }
+      .form-input {
+        @apply w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl bg-[var(--secondary-color)] text-[var(--text-primary)] focus:outline-0 focus:ring-2 focus:ring-[var(--primary-color)] border-none h-14 placeholder:text-[var(--text-secondary)] p-4 text-base font-normal leading-normal;
+      }
+      .nav-link {
+        @apply flex flex-1 flex-col items-center justify-center gap-1 rounded-lg p-2 text-[var(--text-secondary)] transition-colors duration-200 hover:text-[var(--primary-color)];
+      }
+      .nav-link.active {
+        @apply text-[var(--primary-color)];
+      }
+      .nav-icon {
+        @apply h-7 w-7;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="relative flex min-h-screen flex-col bg-[var(--background-color)] font-['Plus_Jakarta_Sans',_'Noto_Sans',_sans-serif] text-[var(--text-primary)]">
+<div class="flex-grow">
+<header class="sticky top-0 z-10 flex items-center justify-between border-b border-[var(--secondary-color)] bg-[var(--background-color)] p-4">
+<button class="flex h-10 w-10 items-center justify-center rounded-full hover:bg-gray-100">
+<span class="material-symbols-outlined text-2xl"> arrow_back_ios_new </span>
+</button>
+<h1 class="text-xl font-bold">Create Market</h1>
+<div class="h-10 w-10"></div>
+</header>
+<main class="p-4">
+<form class="space-y-6">
+<div>
+<label class="mb-2 block text-sm font-medium text-gray-700" for="event-question">Event Question</label>
+<input class="form-input" id="event-question" placeholder="e.g., Will BTC price surpass $70,000 by July 1st?" type="text"/>
+</div>
+<div>
+<label class="mb-2 block text-sm font-medium text-gray-700" for="resolution-criteria">Resolution Criteria</label>
+<textarea class="form-input min-h-[120px] resize-y" id="resolution-criteria" placeholder="Describe how the market will be resolved..."></textarea>
+</div>
+<div>
+<label class="mb-2 block text-sm font-medium text-gray-700">Data Sources</label>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-2 rounded-xl border-2 border-[var(--primary-color)] bg-[var(--primary-color)] bg-opacity-10 py-3 font-semibold text-[var(--primary-color)]" type="button">
+<span class="material-symbols-outlined"> data_object </span>
+                On-Chain
+              </button>
+<button class="flex items-center justify-center gap-2 rounded-xl border border-gray-300 py-3 font-semibold text-gray-600 hover:bg-gray-50" type="button">
+<span class="material-symbols-outlined"> public </span>
+                Off-Chain
+              </button>
+</div>
+</div>
+<div>
+<label class="mb-2 block text-sm font-medium text-gray-700" for="initial-stake">Initial Stake</label>
+<div class="relative">
+<input class="form-input pl-12" id="initial-stake" placeholder="1000" type="number"/>
+<span class="absolute left-4 top-1/2 -translate-y-1/2 font-bold text-[var(--text-secondary)]">$DUCK</span>
+</div>
+</div>
+</form>
+</main>
+</div>
+<footer class="sticky bottom-0 z-10 w-full">
+<div class="px-4 pb-4 pt-2">
+<button class="flex h-12 w-full min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full bg-[var(--primary-color)] px-5 text-base font-bold leading-normal tracking-[0.015em] text-white shadow-lg shadow-[var(--primary-color)]/30 transition-transform duration-200 hover:scale-105">
+<span class="truncate">Deploy Market</span>
+</button>
+</div>
+<nav class="flex justify-around border-t border-[var(--secondary-color)] bg-[var(--background-color)]/80 py-2 backdrop-blur-sm">
+<a class="nav-link active" href="#">
+<span class="material-symbols-outlined nav-icon"> leaderboard </span>
+<span class="text-xs font-medium">Markets</span>
+</a>
+<a class="nav-link" href="#">
+<span class="material-symbols-outlined nav-icon"> account_balance_wallet </span>
+<span class="text-xs font-medium">Portfolio</span>
+</a>
+<a class="nav-link" href="#">
+<span class="material-symbols-outlined nav-icon"> account_circle </span>
+<span class="text-xs font-medium">Account</span>
+</a>
+</nav>
+</footer>
+
+</body></html>

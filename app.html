@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>DuckOracle - Markets</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #ea2a33;
+        --secondary-color: #FBBF24;
+      }
+      .bg-primary { background-color: var(--primary-color) }
+      .text-primary { color: var(--primary-color) }
+      .bg-secondary { background-color: var(--secondary-color) }
+      .text-secondary { color: var(--secondary-color) }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-gray-50">
+<div class="relative flex size-full min-h-screen flex-col justify-between group/design-root overflow-x-hidden" style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
+<div class="flex flex-col">
+<header class="bg-white sticky top-0 z-10 shadow-sm">
+<div class="flex items-center p-4">
+<h1 class="text-xl font-bold text-gray-900 flex-1 text-center">DuckOracle</h1>
+<button class="text-gray-600 hover:text-gray-900">
+<span class="material-symbols-outlined">
+                        search
+                    </span>
+</button>
+</div>
+<div class="px-4 pb-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">search</span>
+<input class="form-input w-full rounded-full border-gray-200 bg-gray-100 pl-10 pr-4 py-2 text-base placeholder:text-gray-500 focus:ring-primary focus:border-primary" placeholder="Search markets (e.g. BTC, elections)" type="search"/>
+</div>
+</div>
+</header>
+<main class="flex-grow p-4 space-y-4">
+<div class="bg-white rounded-2xl shadow-md p-4 space-y-4">
+<div class="flex items-center justify-between">
+<p class="text-gray-800 font-semibold text-lg">Will BTC hit $100K by end of month?</p>
+<div class="flex items-center gap-1 text-gray-500">
+<span class="material-symbols-outlined text-sm">timer</span>
+<span class="text-sm font-medium">15d 8h</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex items-center justify-between p-3 rounded-lg bg-green-100 text-green-800 hover:bg-green-200 transition-colors">
+<span class="font-bold">YES</span>
+<span class="font-bold text-lg">1.8x</span>
+</button>
+<button class="flex items-center justify-between p-3 rounded-lg bg-red-100 text-red-800 hover:bg-red-200 transition-colors">
+<span class="font-bold">NO</span>
+<span class="font-bold text-lg">2.2x</span>
+</button>
+</div>
+</div>
+<div class="bg-white rounded-2xl shadow-md p-4 space-y-4">
+<div class="flex items-center justify-between">
+<p class="text-gray-800 font-semibold text-lg">Will ETH reach $5,000 by year-end?</p>
+<div class="flex items-center gap-1 text-gray-500">
+<span class="material-symbols-outlined text-sm">timer</span>
+<span class="text-sm font-medium">2d 12h</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex items-center justify-between p-3 rounded-lg bg-green-100 text-green-800 hover:bg-green-200 transition-colors">
+<span class="font-bold">YES</span>
+<span class="font-bold text-lg">1.2x</span>
+</button>
+<button class="flex items-center justify-between p-3 rounded-lg bg-red-100 text-red-800 hover:bg-red-200 transition-colors">
+<span class="font-bold">NO</span>
+<span class="font-bold text-lg">0.8x</span>
+</button>
+</div>
+</div>
+<div class="bg-white rounded-2xl shadow-md p-4 space-y-4">
+<div class="flex items-center justify-between">
+<p class="text-gray-800 font-semibold text-lg">Will the global temperature rise by 1.5°C by 2030?</p>
+<div class="flex items-center gap-1 text-gray-500">
+<span class="material-symbols-outlined text-sm">timer</span>
+<span class="text-sm font-medium">5d 6h</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex items-center justify-between p-3 rounded-lg bg-green-100 text-green-800 hover:bg-green-200 transition-colors">
+<span class="font-bold">YES</span>
+<span class="font-bold text-lg">0.9x</span>
+</button>
+<button class="flex items-center justify-between p-3 rounded-lg bg-red-100 text-red-800 hover:bg-red-200 transition-colors">
+<span class="font-bold">NO</span>
+<span class="font-bold text-lg">1.1x</span>
+</button>
+</div>
+</div>
+<div class="bg-white rounded-2xl shadow-md p-4 space-y-4">
+<div class="flex items-center justify-between">
+<p class="text-gray-800 font-semibold text-lg">Will the next US presidential election be decided by a margin of less than 1%?</p>
+<div class="flex items-center gap-1 text-gray-500">
+<span class="material-symbols-outlined text-sm">timer</span>
+<span class="text-sm font-medium">1d 18h</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex items-center justify-between p-3 rounded-lg bg-green-100 text-green-800 hover:bg-green-200 transition-colors">
+<span class="font-bold">YES</span>
+<span class="font-bold text-lg">1.5x</span>
+</button>
+<button class="flex items-center justify-between p-3 rounded-lg bg-red-100 text-red-800 hover:bg-red-200 transition-colors">
+<span class="font-bold">NO</span>
+<span class="font-bold text-lg">0.7x</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+<footer class="sticky bottom-0 bg-white border-t border-gray-200 shadow-t-md z-10">
+<nav class="flex justify-around py-2">
+<a class="flex flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined">store</span>
+<span class="text-xs font-bold">Markets</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-gray-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="text-xs font-medium">Portfolio</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-gray-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-medium">Account</span>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>
