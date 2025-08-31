@@ -1,5 +1,6 @@
 import { Metadata } from "next";
-import App from "./app";
+import { DuckOracleApp } from "~/components/DuckOracleApp";
+
 import { APP_NAME, APP_DESCRIPTION, APP_OG_IMAGE_URL } from "~/lib/constants";
 import { getMiniAppEmbedMetadata } from "~/lib/utils";
 
@@ -7,10 +8,10 @@ export const revalidate = 300;
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: APP_NAME,
+    title: "DuckOracle - Decentralized Prediction Markets",
     openGraph: {
-      title: APP_NAME,
-      description: APP_DESCRIPTION,
+      title: "DuckOracle - Decentralized Prediction Markets",
+      description: "Create and bet on event outcomes with AI-powered oracles on DuckChain",
       images: [APP_OG_IMAGE_URL],
     },
     other: {
@@ -20,5 +21,5 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function Home() {
-  return (<App />);
+  return <DuckOracleApp />;
 }
